@@ -126,10 +126,10 @@ def api_get_landmark_coordinates(image, training=False):
 
 def load_model(model_type = 'alphabets'):
     if model_type == 'alphabets':
-        model_path = 'alphabets_model.pkl'
+        model_path = os.path.join('models','alphabets_model.pkl')
 
     if model_type == 'digits':
-        model_path = 'digits_model.pkl'
+        model_path = os.path.join('models','digits_model.pkl')
 
     model = pickle.load(open(model_path, "rb"))
     return model

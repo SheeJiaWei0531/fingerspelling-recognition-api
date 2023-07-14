@@ -9,8 +9,7 @@ RUN apt-get update && apt-get install libgl1 -y
 COPY fingerspelling fingerspelling
 COPY setup.py setup.py
 
-COPY alphabets_model.pkl alphabets_model.pkl
-COPY digits_model.pkl digits_model.pkl
+COPY models models
 
 RUN pip install .
 
